@@ -1,0 +1,11 @@
+{
+  "name": "RobotDashboard",
+  "version": "0.0.1a",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js"
+  },
+  "devDependencies": {
+    "electron": "^1.4.12"
+  }
+}

@@ -83,8 +83,6 @@ td {
 	top:1px;
 }
 
-
-
 #feed {
   background-color: blue;
   width: 320px;
@@ -94,4 +92,8 @@ td {
 
 .status-disabled {
   color: red;
+}
+
+.status-enabled {
+  color: green;
 }

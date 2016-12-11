@@ -5,12 +5,14 @@
 <head>
   <title>Robot Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="\Python27\Lib\site-packages\pynetworktables2js\js\networktables.js"></script>
+  <script type="text/javascript" src="nt.js"></script>
 </head>
 
 <body>
   <div id="Header">
-    <div id="Title bar">
-      <center><h1>Robot status: <span class="status-disabled">Disabled</span></h1></center>
+    <div id="titlebar">
+      <center><h1>Robot status: <span id="global-status" class="status-disabled">Disabled</span></h1></center>
     </div>
     <ul>
       <li>Arm Camera</li>
@@ -30,12 +32,12 @@
         <td>
           <div class="content" id="Options">
             <h2>Options</h2>
-            <a href="#" class="robo-disabled-btn">Enable Robot</a>
+            <a href="#" class="robo-disabled-btn" onclick="enableBtn()">Enable Robot</a>
             <h3>Joystick</h3>
-            <p>Axis 0: <span id="axis0"></span></p>
-            <p>Axis 4: <span id="axis4"></span></p>
-            <p>Axis 2: <span id="axis2"></span></p>
-            <p>Axis 3: <span id="axis3"></span></p>
+            <p id="axis0">Axis 0:</p>
+            <p id="axis4">Axis 4:</p>
+            <p id="axis2">Axis 2:</p>
+            <p id="axis3">Axis 3:</p>
           </div>
         </td>
       </tr>
