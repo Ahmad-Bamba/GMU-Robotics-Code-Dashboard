@@ -2,10 +2,17 @@
   "name": "RobotDashboard",
   "version": "0.0.1a",
   "main": "app.js",
+  "description" : "A web-based robot dashboard",
+  "repository" : "https://github.com/Ahmad-Bamba/GMU-Robotics-Code-Dashboard.git",
+  "license" : "MIT",
   "scripts": {
     "start": "app.js"
   },
   "devDependencies": {
     "electron": "^1.4.12"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.7.2"
   }
 }

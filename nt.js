@@ -1,7 +1,7 @@
 window.onload = function() {
   NetworkTables.addWsConnectionListener(function(connected) {
     if(connected) {
-      if(NetworkTables.getValue('/Robot Dashboard/Robot State') === "true") {
+      if(NetworkTables.getValue('/RobotDashboard/RobotState') === "true") {
         document.getElementById('global-status').className = "status-enabled";
         document.getElementById('global-status').innerHTML = "Enabled";
       } else {
@@ -13,13 +13,13 @@ window.onload = function() {
   }, true);
 
   NetworkTables.addGlobalListener(function(key, value, isNew){
-    if(key === "/Robot Dashboard/Axis 0") {
+    if(key === "/RobotDashboard/Axis0") {
       document.getElementById('axis0').innerHTML = "Axis 0: " + value;
-    } else if(key === "/Robot Dashboard/Axis 4") {
+    } else if(key === "/RobotDashboard/Axis4") {
       document.getElementById('axis4').innerHTML = "Axis 4: " + value;
-    } else if(key === "/Robot Dashboard/Axis 2") {
+    } else if(key === "/RobotDashboard/Axis2") {
       document.getElementById('axis2').innerHTML = "Axis 2: " + value;
-    } else if(key === "/Robot Dashboard/Axis 3") {
+    } else if(key === "/RobotDashboard/Axis3") {
       document.getElementById('axis3').innerHTML = "Axis 3: " + value;
     }
   }, true);
